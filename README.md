@@ -8,3 +8,4 @@ Setup.
 2. Other users added are have user roles.
 3. The Sql Script for the database is in the solution folder.
 4. Update the connection string and run migration to set up the database.
+5. Signup and use the user signup to create or import blogs into the system.

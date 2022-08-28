@@ -1,0 +1,116 @@
+﻿@model RegisterRequest
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Register</title>
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="~/blog_template/images/favicon.ico" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="~/blog_template/css/bootstrap.min.css">
+      <!-- Typography CSS -->
+      <link rel="stylesheet" href="~/blog_template/css/typography.css">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="~/blog_template/css/style.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="~/blog_template/css/responsive.css">
+   </head>
+   <body>
+      <!-- loader Start -->
+  @*    <div id="loading">
+         
+      </div>*@
+      <!-- loader END -->
+        <!-- Sign in Start -->
+        <section class="sign-in-page">
+            <div class="container p-0">
+                <div class="row no-gutters">
+                    <div class="col-sm-12 align-self-center">
+                        <div class="sign-in-from bg-white">
+                            <h1 class="mb-0">Sign Up</h1>
+                            <p>Enter your details to sign up.</p>
+                            <form class="mt-4" method="post">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Title</label>
+                                    <input  name="Title" value="@Model.Title" type="text" class="form-control mb-0" id="exampleInputEmail1" placeholder="Enter Title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail2">First Name</label>
+                                    <input name="FirstName" value="@Model.FirstName" type="text" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter First Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Last Name</label>
+                                    <input name="LastName" value="@Model.LastName" type="text" class="form-control mb-0" id="exampleInputPassword1" placeholder="Enter Last Name">
+                                </div>
+                                   <div class="form-group">
+                                    <label for="exampleInputPassword1">Email</label>
+                                    <input name="Email" value="@Model.Email" type="text" class="form-control mb-0" id="exampleInputPassword1" placeholder="Enter Email">
+                                </div>
+                                 <div class="form-group">
+                                    <label for="Password">Password</label>
+                                    <input name="Password" value="@Model.Password" type="password" class="form-control mb-0" id="Password" placeholder="Enter Password">
+                                </div>
+                                 <div class="form-group">
+                                    <label for="ConfirmPassword">Confirm Password</label>
+                                    <input  name="ConfirmPassword" value="@Model.ConfirmPassword" type="password" class="form-control mb-0" id="ConfirmPassword" placeholder="Enter Confirm Password">
+                                </div>
+                                <div class="d-inline-block w-100">
+                                    <div class="custom-control custom-checkbox d-inline-block mt-2 pt-1">
+                                      
+                                    </div>
+                                    <button type="submit" class="btn btn-primary float-right">Register</button>
+                                </div>
+                                 <div class="sign-info">
+                                    <span class="dark-color d-inline-block line-height-2">Already have an account? <a href="@Url.Action("Login")">Login</a></span>
+                                  
+                                </div>
+                              
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sign in END -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="~/blog_template/js/jquery.min.js"></script>
+      <script src="~/blog_template/js/popper.min.js"></script>
+      <script src="~/blog_template/js/bootstrap.min.js"></script>
+      <!-- Appear JavaScript -->
+      <script src="~/blog_template/js/jquery.appear.js"></script>
+      <!-- Countdown JavaScript -->
+      <script src="~/blog_template/js/countdown.min.js"></script>
+      <!-- Counterup JavaScript -->
+      <script src="~/blog_template/js/waypoints.min.js"></script>
+      <script src="~/blog_template/js/jquery.counterup.min.js"></script>
+      <!-- Wow JavaScript -->
+      <script src="~/blog_template/js/wow.min.js"></script>
+      <!-- Apexcharts JavaScript -->
+      <script src="~/blog_template/js/apexcharts.js"></script>
+      <!-- Slick JavaScript -->
+      <script src="~/blog_template/js/slick.min.js"></script>
+      <!-- Select2 JavaScript -->
+      <script src="~/blog_template/js/select2.min.js"></script>
+      <!-- Owl Carousel JavaScript -->
+      <script src="~/blog_template/js/owl.carousel.min.js"></script>
+      <!-- Magnific Popup JavaScript -->
+      <script src="~/blog_template/js/jquery.magnific-popup.min.js"></script>
+      <!-- Smooth Scrollbar JavaScript -->
+      <script src="~/blog_template/js/smooth-scrollbar.js"></script>
+      <!-- Chart Custom JavaScript -->
+      <script src="~/blog_template/js/chart-custom.js"></script>
+      <!-- Custom JavaScript -->
+      <script src="~/blog_template/js/custom.js"></script>
+
+      
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        @await Component.InvokeAsync("Notyf")
+   </body>
+</html>

@@ -1,0 +1,77 @@
+﻿@model List<BlogResponse>
+@{
+    ViewData["Title"] = "Blogs";
+}
+
+   <div class="container-fluid">
+   <div class="row">
+      
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Order By
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="@Url.Action("",new {orderby = "asc"})">Published Date(Ascedning)</a>
+    <a class="dropdown-item" href="@Url.Action("",new {orderby = "dsc"})">Published Date(Descending)</a>
+  </div>
+  <br/>
+    <br/>
+</div>
+                                    </div>
+   
+                                    
+                                    
+                                    <div class="col-md-12">
+        <div class="ais-InstantSearch">
+            <div class="row">
+       
+                <div class="col-md-12">
+                    <div class="right-panel">
+                        <div class="row">
+                          
+                           
+                            <div class="col-md-12">
+                                <div class="iq-product-layout-grid">
+                                    <div id="hits">
+                                        <div class="ais-Hits iq-product">
+                                            <ul class="ais-Hits-list iq-product-list">
+                                                @foreach (var item in Model)
+                                                {
+                                                    <li key="17" class="ais-Hits-item iq-product-item iq-card">
+                                                        <div class="text-center">
+                                                           
+                                                                <div class="h-56 d-flex align-items-center justify-content-center bg-white iq-border-radius-15">
+                                                                    <img src="https://imgs.search.brave.com/pXbGTD862TuweDrxjIZjC91MoBCY7gQo0ZOpHQIlqXQ/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5h/NVlPbV8xTi1vZS1P/MDI1Snc0UFRRSGFF/OCZwaWQ9QXBp" align="left" alt="" width="150"  height="200">
+                                                                </div>
+                                                           
+                                                            <div class="card-body">
+                                                                <div class="text-justify">
+                                                                    <a href="javascript:void(0)">@item.Title</a>
+                                                                    <p class="font-size-12 mb-0">@item.PublicationDate </p>
+                                                    
+                                                                </div>
+                                                                <div class="iq-product-action my-2">
+  
+                                                                    <p class="font-size-12 mb-0">@item.Description </p>
+                                                                  
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                }
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      </div>
